@@ -29,7 +29,7 @@ GTK support for GUI features:
 `yum install gtk2-devel`
 
 ## Addtionals
-OpenCV installed by YUM was not full feature support, better way is compiled it manually.
+OpenCV installed by YUM was not full feature support, better way is compile it manually.
 
 ## Credits
 Made with ❤ by [kyshel](http://github.com/kyshel)  
