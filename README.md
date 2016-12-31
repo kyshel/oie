@@ -27,6 +27,7 @@ Quick Deploy:
 
 ## Optional Dependencies
 GTK support for GUI features:
+
 `yum install gtk2-devel`
 
 ## Addtionals

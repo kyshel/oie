@@ -1,7 +1,6 @@
 <?php
 // load sessions
-// require_once("load.php");
-session_start();
+require_once("load.php");
 ?>
 
 <!DOCTYPE html>
