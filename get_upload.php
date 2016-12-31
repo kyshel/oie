@@ -4,19 +4,6 @@ require_once("header.php");
 
 <?php
 
-
-echo '<br>request:';
-var_dump($_REQUEST);
-
-echo '<br>POST:';
-var_dump($_POST);
-
-echo '<br>GET:';
-var_dump($_GET);
-
-echo '<br>FILES:';
-var_dump($_FILES);
-
 // echo "<pre>";
 // print_r($GLOBALS);
 // echo "</pre>";
@@ -40,9 +27,10 @@ if (isset($_POST["submit"])){
 				echo "Upload: " . $_FILES["file"]["name"] . "<br />";
 				echo "Type: " . $_FILES["file"]["type"] . "<br />";
 				echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
-				echo "Stored in: " . $store_path;
+				echo "Stored in: " . $store_path."<br>";
 
 				$_SESSION["file_path"] = $store_path;
+
 				echo '<img src="'.$_SESSION["file_path"].'" style="width:300px;">';
 
 			}else{

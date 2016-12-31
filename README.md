@@ -5,11 +5,12 @@ Oie is an Online Image Editor.
 Oie is still on developing, below are progress:
 
 - [x] php upload image
-- [ ] first filter
+- [x] first filter
 - [ ] multi filter
 - [ ] pass paremeters from broswer to python script
 - [ ] easy use
 - [ ] better UI
+- [ ] multi language support
 - [ ] speed boost
 - [ ] canvas support
 - [ ] video support

@@ -14,8 +14,8 @@ session_start();
 <nav>
 	<a href="index.php">index</a>
 	<a href="filter.php">filter</a>
-	<a href="#">adjust</a>
+<!-- 	<a href="#">adjust</a>
 	<a href="#">crop</a>
 	<a href="#">resize</a>
-	<a href="#">rotate</a>
+	<a href="#">rotate</a> -->
 </nav>

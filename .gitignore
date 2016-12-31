@@ -1,10 +1,12 @@
 2.4.5/*
 3.2.0/*
 img/*
+test/*
+
 upload/*.jpg
 upload/*.png
+processed/*.jpg
+processed/*.png
 
-a.jpg
-a.py
-func.py
-messi5.jpg
+
+
