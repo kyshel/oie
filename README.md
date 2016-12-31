@@ -6,15 +6,18 @@ Oie is still on developing, below are progress:
 
 - [x] php upload image
 - [x] first filter
-- [ ] multi filter
-- [ ] pass paremeters from broswer to python script
+- [x] multi filter
+- [x] pass paremeters from broswer to python script
+
 - [ ] easy use
 - [ ] better UI
 - [ ] multi language support
+
 - [ ] speed boost
 - [ ] canvas support
 - [ ] video support
 - [ ] offline support
+
 - [ ] report
 
 ## Require

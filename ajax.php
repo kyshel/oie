@@ -40,7 +40,6 @@ if ( $output == NULL) {
 	echo '<br>Operate result: <pre>'.$output.'</pre>';
 	// add time() to prevent cache
 	echo '<img src="'.$save_path.'?'.time().'" style="width:300px;">';
-	echo '<a href="">apply the effect</a>';
 	
 }
 

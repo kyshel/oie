@@ -4,10 +4,13 @@ require_once("header.php");
 
 <?php
 echo '<img src="'.$_SESSION["file_path"].'" style="width:300px;"><br>';
+
+$array=getArrayFromJsonFile('data.json');
+foreach ($array[filter] as $key => $item) {
+	echo '<button onclick="select_argv(this.value)" value="'.$item.'">'.$item.'</button> ';
+}
 ?>
 
-<button onclick="select_argv(this.value)" value="blur">blur</button>
-<button onclick="select_argv(this.value)" value="laplacian">laplacian</button>
 
 <div id="argv_control"></div>
 

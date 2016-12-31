@@ -25,7 +25,26 @@
 				$.cookie('blur_argv', $(this).val(), {expires: 365});
 			})
 
-		}else{
+		}else if(op == 'threshold'){
+
+			if (typeof $.cookie('threshold_argv') === 'undefined'){
+				$.cookie('blur_argv',150)
+			}	
+
+			send_ajax(op, $.cookie('threshold_argv'));
+			argv_control='<select id="argv_selector" onchange="send_ajax(\''+op+'\',this.value)"> \
+			<option value="50" selected>50</option> \
+			<option value="100">100</option>\
+			<option value="150">150</option>\
+			<option value="200">200</option></select>';
+			$('#argv_control').html(argv_control);
+			$('#argv_selector').val($.cookie('threshold_argv')).attr('selected', true);
+			$('#argv_selector').change(function() {
+				$.cookie('threshold_argv', $(this).val(), {expires: 365});
+			})
+
+		}
+		else{
 			send_ajax(op);
 		}
 	}
