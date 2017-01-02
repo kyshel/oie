@@ -1,40 +1,29 @@
 # oie
 Oie is an Online Image Editor.
 
-## Status
-Oie is still on developing, below are progress:
+## Introduction
+Oie is based B/S architechture, browser as GUI, Python-OpenCV as core processor, PHP connect front-end and backend.
 
-- [x] php upload image
-- [x] first filter
-- [x] multi filter
-- [x] pass paremeters from broswer to python script
+Oie is still on developing, to see the progress check [releases](https://github.com/kyshel/oie/releases).
 
-- [ ] easy use
-- [ ] better UI
-- [ ] multi language support
 
-- [ ] speed boost
-- [ ] canvas support
-- [ ] video support
-- [ ] offline support
-
-- [ ] report
 
 ## Require
-Develop Enviroment: CentOS7, Python 2.7.5, OpenCV 2.4.5
+Develop Enviroment: CentOS7, Apache 2.4.6, PHP 5.4.16, Python 2.7.5, OpenCV 2.4.5
 
-Quick Deploy:
+Deploy From A minimal CentOS7 installation:
+1. `yum install httpd php numpy opencv*`
+2. `service httpd start`
+3. `firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --reload`
+4. `cd /var/www/html && git clone https://github.com/kyshel/oie.git`
+5. `cd oie && chown apache:apache upload/ processed/ python/*.py`
+6. Open your client broswer, input `your.server.address/ioe` 
 
-`yum install numpy opencv*`
 
 
 ## Optional Dependencies
-GTK support for GUI features:
+- GTK support for GUI features: `yum install gtk2-devel tkinter`
 
-`yum install gtk2-devel`
-
-## Addtionals
-OpenCV installed by YUM was not full feature support, better way is compile it manually.
 
 ## Credits
 Made with ❤ by [kyshel](http://github.com/kyshel)  

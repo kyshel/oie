@@ -1,7 +1,18 @@
 {
-	"filter":[
-		"blur",
-		"threshold",
-		"laplacian"
-	]
+	"filter":{
+		"blur":{
+			"argv_type":"a",
+			"argv_range":"1 50 5"
+		},
+		"threshold":{
+			"argv_type":"a",
+			"argv_range":"1 255 30"
+		},
+		"laplacian":{},
+		"gray":{},
+		"rotate":{
+			"argv_type":"a",
+			"argv_range":"0 360 10"
+		}
+	}
 }

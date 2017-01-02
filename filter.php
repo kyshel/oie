@@ -6,7 +6,8 @@ require_once("header.php");
 echo '<img src="'.$_SESSION["file_path"].'" style="width:300px;"><br>';
 
 $array=getArrayFromJsonFile('data.json');
-foreach ($array[filter] as $key => $item) {
+//echo "<pre>";var_dump($array);echo "</pre>";
+foreach ($array[filter] as $item => $item_content) {
 	echo '<button onclick="select_argv(this.value)" value="'.$item.'">'.$item.'</button> ';
 }
 ?>
