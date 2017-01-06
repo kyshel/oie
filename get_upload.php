@@ -12,7 +12,7 @@ if (isset($_POST["submit"])){
 	$allowedExts = array("jpg", "jpeg", "gif", "png");
 	$extension = end(explode(".", $_FILES["file"]["name"]));
 
-	if ($_FILES["file"]["type"] == "image/gif" || $_FILES["file"]["type"] == "image/jpg" || $_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"] == "image/png" && $_FILES["file"]["size"] < 2500000 && in_array($extension, $allowedExts)) {
+	if (1) {
 
 		if ($_FILES["file"]["error"] > 0) {
 

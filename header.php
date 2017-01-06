@@ -21,4 +21,5 @@ require_once("load.php");
 	<a href="#">resize</a>
 	<a href="#">rotate</a> 
 -->
+
 </nav>

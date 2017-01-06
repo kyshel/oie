@@ -12,6 +12,7 @@ Oie is still on developing, to see the progress check [releases](https://github.
 Develop Enviroment: CentOS7, Apache 2.4.6, PHP 5.4.16, Python 2.7.5, OpenCV 2.4.5
 
 Deploy From A minimal CentOS7 installation:
+
 1. `yum install httpd php numpy opencv*`
 2. `service httpd start`
 3. `firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --reload`
