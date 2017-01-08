@@ -1,17 +1,17 @@
-# oie
+# Oie
 Oie is an Online Image Editor.
 
 ## Introduction
-Oie is based B/S architechture, browser as GUI, Python-OpenCV as core processor, PHP connect front-end and backend.
+Oie is based B/S architechture, browser as GUI, Python-OpenCV as core processor, PHP connect front-end and back-end.
 
-Oie is still on developing, to see the progress check [releases](https://github.com/kyshel/oie/releases).
+Oie is still on developing, to see the progress, check [releases](https://github.com/kyshel/oie/releases).
 
 
 
 ## Require
 Develop Enviroment: CentOS7, Apache 2.4.6, PHP 5.4.16, Python 2.7.5, OpenCV 2.4.5
 
-Deploy From A minimal CentOS7 installation:
+Deploy from a minimal CentOS7 installation:
 
 1. `yum install httpd php numpy opencv*`
 2. `service httpd start`

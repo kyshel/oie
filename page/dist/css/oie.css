@@ -1,0 +1,19 @@
+body{
+	height: 1000px;
+	padding-top: 70px;
+}
+
+.process_button{
+	width: 100%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.input_resize{
+	width: 30%;
+	display: inline;
+}
+
+.image_preview{
+	max-width: 300px;
+}

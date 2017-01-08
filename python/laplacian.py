@@ -5,7 +5,7 @@ file_path = argv[1]
 save_path = argv[2]
 
 
-img = cv2.imread(file_path,0)
+img = cv2.imread(file_path,1)
 laplacian = cv2.Laplacian(img,cv2.CV_64F)
 
 if cv2.imwrite(save_path,laplacian):

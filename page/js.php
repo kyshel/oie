@@ -3,6 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.4/bootstrap-slider.min.js"></script>
 
+
 <script type="text/javascript">
 
 	function select_argv(op){
@@ -14,11 +15,13 @@
 			filter_object=data.filter[op];
 
 			if (filter_object.hasOwnProperty("argv_type")) {
-				if (filter_object.argv_type == 'a') {
+				if (filter_object.argv_type == 'slide') {
 					var argv_split=filter_object.argv_range.split(' ');
 					show_argv_control(op,argv_split,filter_object.argv_name)
 				}else if(filter_object.argv_type == 'resize'){
 					show_argv_control_resize(op,filter_object)
+				}else if(filter_object.argv_type == 'button'){
+					show_argv_control_button(op,filter_object)
 				}
 			}else{
 				$('#argv_control').html(capitalizeFirstLetter(op) + ' result:');
@@ -30,13 +33,36 @@
 		});
 	}
 
-	function show_argv_control_resize(op, filter_object){
+	
+
+	function show_argv_control_button(op, filter_object){
+
+
 		console.log(filter_object); 
 
-		argv_control='<input id="resize_x" type="number" name="" value="30"> x ';
-		argv_control+='<input id="resize_y" type="number" name="" value="30">';
-		argv_control+='<input type="checkbox" name="">';
-		argv_control+='<button id="btn_resize">Apply</button>';
+		argv_control='Choose type: ';
+		for (code in filter_object['argv_button']) {
+			console.log(code);
+			console.log(filter_object.argv_button[code]);
+			button_text=filter_object.argv_button[code];
+			argv_control+=' <button onclick="send_ajax(\''+op+'\','+code+')" class="btn btn-default">'+button_text+'</button>';
+		}
+		argv_control+='<br><br>';
+
+		$('#argv_control').html(argv_control);
+
+
+	}
+
+	function show_argv_control_resize(op, filter_object){
+		//console.log(filter_object); 
+
+		
+
+		argv_control='<div class="form-group"><input id="resize_x" type="number" name="" class="form-control input_resize" value="'+$.cookie('file_origin_width')+'"> x ';
+		argv_control+='<input id="resize_y" type="number" name="" value="'+$.cookie('file_origin_width')+'" class="form-control input_resize"> ';
+		//argv_control+='<input type="checkbox" name="">';
+		argv_control+=' <button id="btn_resize" class="btn btn-default">Apply</button></div>';
 		$('#argv_control').html(argv_control);
 
 		$("#btn_resize").click(function(){
@@ -92,7 +118,6 @@
 		}).success( function(response,status,xhr) {			
 			//console.log(response);
 			$('#ajax_response').html(response);
-
 		}).error( function(e) {
 		});
 
