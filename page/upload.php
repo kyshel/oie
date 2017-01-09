@@ -54,9 +54,9 @@ if (isset($_SESSION["file_origin_path"])) {
 				</div>
 				<div class="panel-body">
 					<img src="'.$_SESSION["file_origin_path_2"].'" style="max-width:300px;"><br><br>
-					<a href="filter.php?image=second"><button class="btn btn-default">Click here to process</button></a>
+					<a href="filter.php?image=second"><button class="btn btn-default btn_second">Click here to process</button></a>
 
-					<a href="filter.php?action=add_weight"><button class="btn btn-default">Click here to add first and second</button></a>
+					<a href="filter.php?action=add_weight"><button class="btn btn-default btn_second">Click here to add first and second</button></a>
 				</div>
 			</div>
 		</div>

@@ -17,3 +17,12 @@ body{
 .image_preview{
 	max-width: 300px;
 }
+
+#show{
+	margin-bottom: 20px;
+}
+
+.btn_second{
+	margin-top: 3px;
+    margin-bottom: 3px;
+}

@@ -11,8 +11,12 @@ require_once("header.php");
 if (isset($_POST["submit"])){
 	$allowedExts = array("jpg", "jpeg", "gif", "png");
 	$extension = end(explode(".", $_FILES["file"]["name"]));
+	setcookie('test_file_type', $_FILES["file"]["type"], time() + (86400 * 30), "/");
 
-	if ($_FILES["file"]["type"] == "image/gif" || $_FILES["file"]["type"] == "image/jpg" || $_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"] == "image/png" && $_FILES["file"]["size"] < 2500000 && in_array($extension, $allowedExts)) {
+
+	//if ($_FILES["file"]["type"] == "image/bmp" || $_FILES["file"]["type"] == "image/gif" || $_FILES["file"]["type"] == "image/jpg" || $_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"] == "image/png" && $_FILES["file"]["size"] < 10000000 && in_array($extension, $allowedExts)) 
+	if (1) 
+	{
 
 		if ($_FILES["file"]["error"] > 0) {
 
@@ -51,8 +55,8 @@ if (isset($_POST["submit"])){
 					$_SESSION["file_origin_size"] = $_FILES["file"]["size"]; // b
 					$_SESSION["file_origin_type"] = $_FILES["file"]["type"];
 
-					$_SESSION["file_origin_width"] = get_shell_output('python ../python/get_shape.py '.$file_origin_path.' 0');
-					$_SESSION["file_origin_height"] = get_shell_output('python ../python/get_shape.py '.$file_origin_path.' 1');
+					$_SESSION["file_origin_width"] = get_shell_output('python ../python/get_shape.py '.$file_origin_path.' 1');
+					$_SESSION["file_origin_height"] = get_shell_output('python ../python/get_shape.py '.$file_origin_path.' 0');
 					$file_origin_width=preg_replace( "/\r|\n/", "", $_SESSION["file_origin_width"] );
 					$file_origin_height=preg_replace( "/\r|\n/", "", $_SESSION["file_origin_height"] );
 					setcookie('file_origin_width', $file_origin_width, time() + (86400 * 30), "/");

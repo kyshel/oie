@@ -39,7 +39,7 @@ echo '</div>'; // row middle
 
 echo '
 <div class="col-md-5">
-	<div class="panel panel-default">
+	<div class="panel panel-default" id="processed_panel">
 		<div class="panel-heading">
 			<h3 class="panel-title">After Process</h3>
 		</div>

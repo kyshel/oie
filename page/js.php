@@ -1,8 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.4/bootstrap-slider.min.js"></script>
-
 
 <script type="text/javascript">
 
@@ -60,7 +55,7 @@
 		
 
 		argv_control='<div class="form-group"><input id="resize_x" type="number" name="" class="form-control input_resize" value="'+$.cookie('file_origin_width')+'"> x ';
-		argv_control+='<input id="resize_y" type="number" name="" value="'+$.cookie('file_origin_width')+'" class="form-control input_resize"> ';
+		argv_control+='<input id="resize_y" type="number" name="" value="'+$.cookie('file_origin_height')+'" class="form-control input_resize"> ';
 		//argv_control+='<input type="checkbox" name="">';
 		argv_control+=' <button id="btn_resize" class="btn btn-default">Apply</button></div>';
 		$('#argv_control').html(argv_control);
@@ -118,6 +113,7 @@
 		}).success( function(response,status,xhr) {			
 			//console.log(response);
 			$('#ajax_response').html(response);
+			$("html,body").animate({scrollTop: $("#processed_panel").offset().top-80}, 500);
 		}).error( function(e) {
 		});
 

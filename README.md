@@ -18,7 +18,7 @@ Deploy from a minimal CentOS7 installation:
 3. `firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --reload`
 4. `cd /var/www/html && git clone https://github.com/kyshel/oie.git`
 5. `cd oie && chown apache:apache upload/ processed/ python/*.py`
-6. Open your client broswer, input `your.server.address/ioe` 
+6. Open your client broswer, input `your.server.address/oie` 
 
 
 
@@ -28,3 +28,4 @@ Deploy from a minimal CentOS7 installation:
 
 ## Credits
 Made with ❤ by [kyshel](http://github.com/kyshel)  
+
